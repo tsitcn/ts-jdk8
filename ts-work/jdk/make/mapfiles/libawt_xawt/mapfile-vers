@@ -61,7 +61,6 @@ SUNWprivate_1.1 {
         Java_sun_awt_X11_XlibWrapper_ScreenOfDisplay;
         Java_sun_awt_X11_XlibWrapper_DoesBackingStore;
         Java_sun_awt_X11_XlibWrapper_RootWindow;
-        Java_sun_awt_X11_XlibWrapper_DisplayDpi;
         Java_sun_awt_X11_XlibWrapper_DisplayHeight;
         Java_sun_awt_X11_XlibWrapper_DisplayWidthMM;
         Java_sun_awt_X11_XlibWrapper_DisplayWidth;
