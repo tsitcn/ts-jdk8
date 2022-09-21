@@ -1,0 +1,77 @@
+参考：generated-configure.sh
+
+参数选择：
+--with-milestone=tsit
+--with-build-number=346
+--with-user-release-suffix=`date '+%Y_%m_%d_%H_%M'`
+
+
+25.232
+hotspot_version
+HOTSPOT_VM_COPYRIGHT=Copyright 2019
+HS_MAJOR_VER=25
+HS_MINOR_VER=232
+HS_BUILD_NUMBER=346
+
+1.8.0的来源：
+jdk_options.m4
+JDK_VERSION="${JDK_MAJOR_VERSION}.${JDK_MINOR_VERSION}.${JDK_MICRO_VERSION}"
+
+hotspot_version
+JDK_MAJOR_VER=1
+JDK_MINOR_VER=8
+JDK_MICRO_VER=0
+
+其中开放了一个BUILD_DATE
+
+
+
+其他参数记录：
+默认是第一个值
+
+--with-jdk-variant
+normal
+
+--with-jvm-interpreter
+template, cpp
+
+--with-jvm-variants
+server, client, minimal1, kernel, zero, zeroshark, core
+
+
+--enable-debug
+release, fastdebug and slowdebug
+
+--with-debug-level
+release, fastdebug and slowdebug
+
+
+--enable-openjdk-only
+yes, no
+
+--disable-headful
+yes, no
+
+--enable-hotspot-test-in-build
+yes, no
+
+--with-cacerts-file
+
+
+--enable-unlimited-crypto
+yes, no
+
+
+--with-milestone
+--with-update-version
+--with-user-release-suffix
+--with-build-number
+--with-vendor-name
+--with-vendor-url
+--with-vendor-bug-url
+--with-vendor-vm-bug-url
+--with-copyright-year
+--disable-debug-symbols
+--disable-zip-debug-info
+--with-native-debug-symbols
+--with-custom-make-dir

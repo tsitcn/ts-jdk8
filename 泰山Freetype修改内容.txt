@@ -1,0 +1,67 @@
+zip与.tar.xz都要下载。
+include/src使用zip的，其他的使用.tar.xz的。
+
+1、configure
+freetype改名为tsfreetype
+
+2、Makefile
+freetype改名为tsfreetype
+
+
+3, builds\freetype.mk
+改名为tsfreetype.mk
+
+4, builds\windows\vc2010
+几个freetype改名为tsfreetype
+tsfreetype.sln中freetype改名为tsfreetype
+tsfreetype.vcxproj中freetype改名为tsfreetype，有一个地方改为vc100
+
+5, ftbuild.h
+增加了一些调试用的代码。
+
+6, freetype\ftbitmap.h
+FT_Bitmap_Italic
+FT_Bitmap_Italic_Direction
+FT_Bitmap_Transform
+FT_Bitmap_WeightXY
+
+7, freetype\ftoutln.h
+FT_Outline_WeightXY
+
+
+8, freetype\ftsyhth.h
+FT_GlyphSlot_Weight
+FT_GlyphSlot_Oblique_Direction
+FT_GlyphSlot_Transform
+
+
+9、base\ftbitmap.c
+FT_Bitmap_DumpBit
+FT_Bitmap_Dump
+FT_Bitmap_Rotate_SrcToDst
+FT_Bitmap_Rotate90
+FT_Bitmap_Rotate270
+FT_Bitmap_Rotate
+FT_Bitmap_WeightXY
+FT_Bitmap_Italic
+FT_Bitmap_Transform
+
+
+10, base\ftobjs.c
+FT_Load_Glyph有所修改
+
+11, base\ftoutln.c
+FT_Outline_EmboldenXY
+FT_Outline_WeightXY
+
+
+12, base\ftsyhth.c
+get_matrix_degree
+FT_GlyphSlot_Oblique_Direction
+FT_GlyphSlot_Transform
+FT_GlyphSlot_Weight
+
+
+13, sfnt\ttsbit.c
+tt_sbit_decoder_alloc_bitmap
+控制渲染的颜色深浅

@@ -1,0 +1,10 @@
+# test on x86_64 uses Oracle Linux but we do not have this for mips64el
+# so use some other Linux Debian for mips64el
+FROM aoqi/debian-mips64el:stable
+MAINTAINER aoqi@loongson.cn
+
+COPY /jdk /jdk
+
+ENV JAVA_HOME=/jdk
+
+CMD ["/bin/bash"]

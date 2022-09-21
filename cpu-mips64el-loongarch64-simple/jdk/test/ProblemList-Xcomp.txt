@@ -1,0 +1,69 @@
+/*
+ * Copyright (c) 2003, 2010, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2021, Loongson Technology. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This code is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 only, as
+ * published by the Free Software Foundation.
+ *
+ * This code is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * version 2 for more details (a copy is included in the LICENSE file that
+ * accompanied this code).
+ *
+ * You should have received a copy of the GNU General Public License version
+ * 2 along with this work; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+ * or visit www.oracle.com if you need additional information or have any
+ * questions.
+ *
+ */
+
+com/sun/jndi/ldap/NamingExceptionMessageTest.java generic-x64
+com/sun/net/httpserver/bugs/B6393710.java generic-all
+com/sun/net/httpserver/bugs/B6529200.java #error generic-mips64el
+com/sun/net/httpserver/Test10.java generic-mips64el
+com/sun/net/httpserver/Test1.java generic-all
+java/beans/PropertyEditor/Test6397609.java generic-x64
+java/lang/annotation/loaderLeak/Main.java #9358,testbug generic-all
+java/lang/ClassLoader/forNameLeak/ClassForNameLeak.java generic-x64
+java/lang/management/MemoryMXBean/PendingAllGC.sh generic-x64
+java/lang/management/MemoryMXBean/Pending.java generic-x64
+java/nio/file/Files/CheckPermissions.java #9800 generic-mips64el,generic-loongarch64
+java/rmi/registry/altSecurityManager/AltSecurityManager.java #error generic-mips64el
+java/rmi/registry/readTest/readTest.sh generic-all
+java/rmi/server/RemoteServer/AddrInUse.java #9587 generic-all
+java/rmi/server/RMISocketFactory/useSocketFactory/unicast/TCPEndpointReadBug.java generic-x64
+java/rmi/server/Unreferenced/leaseCheckInterval/LeaseCheckInterval.java #error generic-mips64el
+java/rmi/transport/dgcDeadLock/DGCDeadLock.java generic-all
+javax/management/MBeanServer/OldMBeanServerTest.java #error generic-mips64el
+javax/management/monitor/DerivedGaugeMonitorTest.java generic-mips64el,generic-x64
+javax/management/remote/mandatory/connection/MultiThreadDeadLockTest.java generic-all
+javax/management/remote/mandatory/connection/ReconnectTest.java generic-all
+javax/management/remote/mandatory/notif/DeadListenerTest.java #error generic-mips64el
+javax/management/remote/mandatory/notif/EmptyDomainNotificationTest.java generic-mips64el
+javax/management/remote/mandatory/notif/NotifReconnectDeadlockTest.java #error generic-mips64el
+javax/net/ssl/ServerName/SSLSocketSNISensitive.java #9601 generic-all
+javax/net/ssl/SSLSession/SessionCacheSizeTests.java #error generic-mips64el
+javax/net/ssl/SSLSession/SessionTimeOutTests.java #error generic-mips64el
+javax/net/ssl/Stapling/HttpsUrlConnClient.java generic-mips64el,generic-loongarch64
+javax/net/ssl/Stapling/SSLEngineWithStapling.java #error generic-mips64el
+javax/net/ssl/Stapling/StapleEnableProps.java #error generic-mips64el
+javax/net/ssl/TLSCommon/TestSessionLocalPrincipal.java generic-mips64el
+javax/sound/sampled/DirectAudio/bug6400879.java #9594 generic-all
+sun/management/jmxremote/startstop/JMXStartStopTest.java generic-mips64el,generic-x64
+sun/net/www/http/ChunkedOutputStream/checkError.java generic-all
+sun/net/www/protocol/https/HttpsClient/ProxyAuthTest.java #error generic-mips64el
+sun/net/www/protocol/https/HttpsClient/ServerIdentityTest.java generic-mips64el
+sun/net/www/protocol/https/HttpsURLConnection/ReadTimeout.java #timeout generic-all
+sun/rmi/server/UnicastServerRef/FilterUSRTest.java generic-x64
+sun/security/ec/TestEC.java #error generic-mips64el
+sun/security/krb5/auto/NullRenewUntil.java #error generic-mips64el
+sun/security/ssl/javax/net/ssl/ServerName/SSLSocketSNISensitive.java #9601 generic-mips64el
+sun/security/ssl/SSLSocketImpl/SSLSocketCloseHang.java generic-all
+sun/security/ssl/Stapling/StatusResponseManager.sh #16219 generic-mips64el
+sun/security/tools/jarsigner/concise_jarsigner.sh #error generic-mips64el

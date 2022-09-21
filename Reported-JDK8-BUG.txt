@@ -1,0 +1,88 @@
+柳鲲鹏
+liukunpeng@ts-it.cn
+泰山信息科技有限公司
+Taishan Information Technology Co., Ltd
+
+
+{{{{{{{{{{ OpenJDK
+1、
+https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8251249
+8251249: 通过 += 把浮点数加到整数上，不报错。
+         结果：不是BUG，是+=自动带有造型功能。
+
+2、
+https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8255021
+8255021: 旋转字体无法打印出来。提供了测试源码、解决办法。
+
+3、
+https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8255882
+windows jre\bin lost two files, jdk\jre\bin have them.
+attach.dll
+sawindbg.dll
+
+4、
+https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8264705
+按下拷屏键后，Clipboard.getContents(null) cost 20 seconds.
+After PrintScreen key pressed, Clipboard.getContents(null) would cost 20 seconds
+未复现？
+
+5、
+https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8264728
+LINX版本，输入法候选框不随光标移动。
+When use chinese IME, the candidate box isn't moved with caret of JTextArea
+
+6、
+有的字体，中文字符的大小，粗体比无格式小。
+Some font, the size of a chinese char, bold style is smaller then plain style
+https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8266196 
+
+应该报告给OpenJDK
+https://bugs.openjdk.java.net
+
+}}}}}}}}}}
+
+{{{{{{{{{{ Freetype
+
+Freetype 斜体修改，已发送freetype-devel@nongnu.org
+回复：
+Hi Liu,
+
+Thank you for your contribution. I understand the idea of shear
+transformation applied to bitmaps. However, your implementation is
+incomplete and not suitable for FreeType just yet.
+
+> 1. ftbitmap.h
+>   FT_EXPORT( FT_Error )
+>   FT_Bitmap_Italic(
+>                       FT_Library  library,
+>                       FT_Bitmap*  bitmap,
+>                       FT_Pos      xStrength,
+>                       FT_Pos      yStrength );
+
+In actuality you only implement horizontal shear. Also I think
+negative xStrength is mishandled. It only matters if offset  decreases
+or increases from top to bottom.
+
+> 2. ftbitmap.c
+>
+> #define TAISHAN_FONT_ITALIC_VALUE 0.20F
+
+FreeType does not use floating numbers and it needs to be explained.
+Why divide by 5 and not 4?  You do not even use newWidth.
+
+Please clean up you by removing all irrelevant variables and code.
+
+}}}}}}}}}}
+
+7, 多次拖放一个文件到文本控件，会卡死。
+Drag and drop file to TextComponent times, it would block to die
+https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8269283
+https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8262446重复？
+我司提供了解决办法。
+
+
+9, Linux屏幕缩放时，dpi错误。
+Toolkit.getScreenResolution() doesn't change on linux when screen zoom
+https://bugs.java.com/bugdatabase/view_bug.do?bug_id=JDK-8280812
+
+

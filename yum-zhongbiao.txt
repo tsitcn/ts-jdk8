@@ -1,0 +1,10 @@
+# yum update
+yum install -y libXtst-devel libXt-devel libXrender-devel
+
+# error. 
+yum install -y cups-devel
+# compile cups 2.3.3
+
+yum install -y alsa-lib-devel
+yum install -y fontconfig-devel
+
