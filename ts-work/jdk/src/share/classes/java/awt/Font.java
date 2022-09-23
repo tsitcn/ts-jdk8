@@ -1894,8 +1894,6 @@ public class Font implements java.io.Serializable
             TextAttribute.SOLID_SIZE_X,
             TextAttribute.SOLID_SIZE_Y,
 
-            TextAttribute.BITMAP_SLOT_TUNING,
-            
             TextAttribute.BITMAP_BOLD_GRAY,
             TextAttribute.BITMAP_BOLD_GRAY_NORTH,
             TextAttribute.BITMAP_BOLD_GRAY_EAST,

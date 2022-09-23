@@ -87,8 +87,6 @@ public final class AttributeValues implements Cloneable {
     private boolean solid_size_x           = TextAttribute.SOLID_SIZE_X_DISABLE;
     private boolean solid_size_y           = TextAttribute.SOLID_SIZE_Y_DISABLE;
 
-    private boolean bitmap_slot_tuning     = TextAttribute.BITMAP_SLOT_TUNING_DISABLE;
-
     private boolean bitmap_bold_gray       = TextAttribute.BITMAP_BOLD_GRAY_DISABLE;
     private boolean bitmap_bold_gray_north = TextAttribute.BITMAP_BOLD_GRAY_NORTH_DISABLE;
     private boolean bitmap_bold_gray_east  = TextAttribute.BITMAP_BOLD_GRAY_EAST_DISABLE;
@@ -165,9 +163,6 @@ public final class AttributeValues implements Cloneable {
 
     public boolean getSolidSizeY() {         return this.solid_size_y; }
     public void    setSolidSizeY(      boolean b) { this.solid_size_y      = b; update(ESOLID_SIZE_Y); }
-
-    public boolean getBitmapSlotTuning() {   return this.bitmap_slot_tuning; }
-    public void    setBitmapSlotTuning(boolean b) { this.bitmap_slot_tuning= b; update(EBITMAP_SLOT_TUNING); }
 
     public boolean getBitmapBoldGray() {     return this.bitmap_bold_gray; }
     public void    setBitmapBoldGray(  boolean b) { this.bitmap_bold_gray  = b; update(EBITMAP_BOLD_GRAY); }
@@ -578,8 +573,6 @@ public final class AttributeValues implements Cloneable {
             && solid_size_x           == rhs.solid_size_x
             && solid_size_y           == rhs.solid_size_y
 
-            && bitmap_slot_tuning     == rhs.bitmap_slot_tuning
-
             && bitmap_bold_gray       == rhs.bitmap_bold_gray
             && bitmap_bold_gray_north == rhs.bitmap_bold_gray_north
             && bitmap_bold_gray_east  == rhs.bitmap_bold_gray_east
@@ -642,8 +635,6 @@ public final class AttributeValues implements Cloneable {
                 case ESOLID_SIZE:        b.append(solid_size);        break;
                 case ESOLID_SIZE_X:      b.append(solid_size_x);      break;
                 case ESOLID_SIZE_Y:      b.append(solid_size_y);      break;
-
-                case EBITMAP_SLOT_TUNING:     b.append(bitmap_slot_tuning);     break;
 
                 case EBITMAP_BOLD_GRAY:       b.append(bitmap_bold_gray);       break;
                 case EBITMAP_BOLD_GRAY_NORTH: b.append(bitmap_bold_gray_north); break;
@@ -724,8 +715,6 @@ public final class AttributeValues implements Cloneable {
         case ESOLID_SIZE_X:      solid_size_x      = src.solid_size_x;      break;
         case ESOLID_SIZE_Y:      solid_size_y      = src.solid_size_y;      break;
 
-        case EBITMAP_SLOT_TUNING:     bitmap_slot_tuning     = src.bitmap_slot_tuning;     break;
-
         case EBITMAP_BOLD_GRAY:       bitmap_bold_gray       = src.bitmap_bold_gray;       break;
         case EBITMAP_BOLD_GRAY_NORTH: bitmap_bold_gray_north = src.bitmap_bold_gray_north; break;
         case EBITMAP_BOLD_GRAY_EAST:  bitmap_bold_gray_east  = src.bitmap_bold_gray_east;  break;
@@ -776,8 +765,6 @@ public final class AttributeValues implements Cloneable {
         case ESOLID_SIZE_X:      return solid_size_x      == src.solid_size_x;
         case ESOLID_SIZE_Y:      return solid_size_y      == src.solid_size_y;
 
-        case EBITMAP_SLOT_TUNING:     return bitmap_slot_tuning     == src.bitmap_slot_tuning;
-
         case EBITMAP_BOLD_GRAY:       return bitmap_bold_gray       == src.bitmap_bold_gray;
         case EBITMAP_BOLD_GRAY_NORTH: return bitmap_bold_gray_north == src.bitmap_bold_gray_north;
         case EBITMAP_BOLD_GRAY_EAST:  return bitmap_bold_gray_east  == src.bitmap_bold_gray_east;
@@ -827,8 +814,6 @@ public final class AttributeValues implements Cloneable {
         case ESOLID_SIZE:        solid_size        = ((Boolean)o).booleanValue(); break;
         case ESOLID_SIZE_X:      solid_size_x      = ((Boolean)o).booleanValue(); break;
         case ESOLID_SIZE_Y:      solid_size_y      = ((Boolean)o).booleanValue(); break;
-
-        case EBITMAP_SLOT_TUNING:     bitmap_slot_tuning     = ((Boolean)o).booleanValue(); break;
 
         case EBITMAP_BOLD_GRAY:       bitmap_bold_gray       = ((Boolean)o).booleanValue(); break;
         case EBITMAP_BOLD_GRAY_NORTH: bitmap_bold_gray_north = ((Boolean)o).booleanValue(); break;
@@ -906,8 +891,6 @@ public final class AttributeValues implements Cloneable {
         case ESOLID_SIZE_X:      return Boolean.valueOf(solid_size_x);
         case ESOLID_SIZE_Y:      return Boolean.valueOf(solid_size_y);
 
-        case EBITMAP_SLOT_TUNING:     return Boolean.valueOf(bitmap_slot_tuning);
-
         case EBITMAP_BOLD_GRAY:       return Boolean.valueOf(bitmap_bold_gray);
         case EBITMAP_BOLD_GRAY_NORTH: return Boolean.valueOf(bitmap_bold_gray_north);
         case EBITMAP_BOLD_GRAY_EAST:  return Boolean.valueOf(bitmap_bold_gray_east);
@@ -969,8 +952,6 @@ public final class AttributeValues implements Cloneable {
         case ESOLID_SIZE:        return true;
         case ESOLID_SIZE_X:      return true;
         case ESOLID_SIZE_Y:      return true;
-
-        case EBITMAP_SLOT_TUNING:     return true;
 
         case EBITMAP_BOLD_GRAY:       return true;
         case EBITMAP_BOLD_GRAY_NORTH: return true;

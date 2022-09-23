@@ -588,12 +588,6 @@ public final class TextAttribute extends Attribute {
     /**
      * bitmap
      */
-    public static final TextAttribute BITMAP_SLOT_TUNING =
-        new TextAttribute("bitmap_slot_tuning");
-    public static final Boolean BITMAP_SLOT_TUNING_DISABLE =
-        Boolean.FALSE;
-    public static final Boolean BITMAP_SLOT_TUNING_ENABLE  =
-        Boolean.TRUE;
 
     public static final TextAttribute BITMAP_BOLD_GRAY   =
         new TextAttribute("bitmap_bold_gray");

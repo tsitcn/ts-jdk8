@@ -73,16 +73,14 @@ public class FontStrikeDesc {
     private static final int FLAG_SOLID_SIZE_X_ENABLE           = (0x01 <<  2);
     private static final int FLAG_SOLID_SIZE_Y_ENABLE           = (0x01 <<  3);
     
-    private static final int FLAG_BITMAP_SLOT_TUNING_ENABLE     = (0x01 <<  4);
+    private static final int FLAG_BITMAP_BOLD_GRAY_ENABLE       = (0x01 <<  4);
+    private static final int FLAG_BITMAP_BOLD_GRAY_NORTH_ENABLE = (0x01 <<  5);
+    private static final int FLAG_BITMAP_BOLD_GRAY_EAST_ENABLE  = (0x01 <<  6);
+    private static final int FLAG_BITMAP_BOLD_GRAY_SORTH_ENABLE = (0x01 <<  7);
+    private static final int FLAG_BITMAP_BOLD_GRAY_WEST_ENABLE  = (0x01 <<  8);
 
-    private static final int FLAG_BITMAP_BOLD_GRAY_ENABLE       = (0x01 <<  5);
-    private static final int FLAG_BITMAP_BOLD_GRAY_NORTH_ENABLE = (0x01 <<  6);
-    private static final int FLAG_BITMAP_BOLD_GRAY_EAST_ENABLE  = (0x01 <<  7);
-    private static final int FLAG_BITMAP_BOLD_GRAY_SORTH_ENABLE = (0x01 <<  8);
-    private static final int FLAG_BITMAP_BOLD_GRAY_WEST_ENABLE  = (0x01 <<  9);
-
-    private static final int FLAG_FLIP_L2R                      = (0x01 << 10);
-    private static final int FLAG_FLIP_T2B                      = (0x01 << 11);
+    private static final int FLAG_FLIP_L2R                      = (0x01 <<  9);
+    private static final int FLAG_FLIP_T2B                      = (0x01 << 10);
 
     /* devTx is to get an inverse transform to get user space values
      * for metrics. Its not used otherwise, as the glyphTx is the important
@@ -392,12 +390,6 @@ public class FontStrikeDesc {
             flags |= FLAG_SOLID_SIZE_Y_ENABLE;
         }
 
-        value = fontAttrs.get(TextAttribute.BITMAP_SLOT_TUNING);
-        if (value != null && (Boolean)value)
-        {
-            flags |= FLAG_BITMAP_SLOT_TUNING_ENABLE;
-        }
-        
         value = fontAttrs.get(TextAttribute.BITMAP_BOLD_GRAY);
         if (value != null && (Boolean)value)
         {
